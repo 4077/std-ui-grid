@@ -1,0 +1,40 @@
+// head {
+@__nodeId__: ~"std_ui_grid__views_main";
+// }
+
+.@{__nodeId__} {
+
+    & > .table {
+
+    }
+
+    & > .paginator {
+        margin: 10px 0;
+
+        .page_button {
+            cursor: pointer;
+            float: left;
+            margin: 2px;
+            padding: 8px 12px;
+            background-color: #FFFFFF;
+            color: #404040;
+
+            &.selected {
+                background-color: #404040;
+                color: #f0f0f0;
+            }
+
+            &.hover {
+                background-color: #a0a0a0;
+                color: #ffffff;
+            }
+        }
+
+        .skipped_pages_button {
+            float: left;
+            margin: 2px;
+            padding: 5px 10px;
+            color: #404040;
+        }
+    }
+}

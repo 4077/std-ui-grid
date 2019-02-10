@@ -1,0 +1,144 @@
+// head {
+@__nodeId__: ~"std_ui_grid__views_table";
+// }
+
+.@{__nodeId__} {
+
+    table {
+        border-spacing: 1px;
+
+        tr {
+
+            &.header_row {
+
+                > td.cell {
+                    cursor: default;
+                    background-color: #404040;
+                    white-space: nowrap;
+
+                    .ui-resizable-handle {
+                        width: 8px;
+                        right: 0;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.3);
+                        }
+                    }
+
+                    > .cell_wrapper {
+                        display: inline-block;
+                        height: 100%;
+                        overflow-x: hidden;
+
+                        > .cell_container {
+
+                            > .cell_content {
+                                position: relative;
+                                padding: 8px 10px;
+                                color: #FFFFFF;
+
+                                &.tmp_max_width {
+                                    max-width: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.sortable {
+                        cursor: pointer;
+
+                        > .cell_wrapper > .cell_container > .cell_content {
+
+                            .sort_icon {
+                                float: left;
+                                position: absolute;
+                                left: 4px;
+                                top: 5px;
+                            }
+                        }
+
+                        &.sort_asc {
+
+                            > .cell_wrapper > .cell_container > .cell_content {
+                                padding-left: 26px;
+                                background-color: #9C1B46;
+
+                                .sort_icon {
+                                    margin: 2px;
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url("../images/icons_ffffff.png") 1px -16px;
+                                }
+                            }
+                        }
+
+                        &.sort_desc {
+
+                            > .cell_wrapper > .cell_container > .cell_content {
+                                padding-left: 26px;
+                                background-color: #00688E;
+
+                                .sort_icon {
+                                    margin: 2px;
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url("../images/icons_ffffff.png") -64px -16px;
+                                }
+                            }
+                        }
+
+                        &.hover {
+
+                            > .cell_wrapper > .cell_container > .cell_content {
+                                background-color: #606060;
+                            }
+
+                            &.sort_asc {
+
+                                > .cell_wrapper > .cell_container > .cell_content {
+                                    background-color: #B72052;
+
+                                }
+                            }
+
+                            &.sort_desc {
+
+                                > .cell_wrapper > .cell_container > .cell_content {
+                                    background-color: #0082B1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.row {
+
+                > td.cell {
+                    position: relative;
+                    vertical-align: top;
+
+                    .ui-resizable-handle {
+                        width: 8px;
+                        right: 0;
+
+                        &:hover {
+                            background-color: rgba(0, 0, 0, 0.3);
+                        }
+                    }
+
+                    > .cell_wrapper {
+                        overflow-x: hidden;
+
+                        > .cell_container {
+
+                            > .cell_content {
+                                position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
